@@ -1,0 +1,7 @@
+<h2>Merge Articles</h2>
+<%= form_tag('/admin/content/merge') do %>
+  <%= label :merge_id, "Article ID" , id: 'merge_id'%>
+  <%= text_field_tag :merge_id %><br>
+  <%= hidden_field_tag :article_id, params[:id] %>
+  <%= submit_tag "Merge", name: nil %><br>
+<% end %>
